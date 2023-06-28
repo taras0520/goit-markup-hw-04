@@ -32,6 +32,7 @@ img {
   display: block;
 }
 :root {
+  --underline-color: #404bbf;
   --bg-color: #ffffff;
   --color-text-title: #2e2f42;
   --color-text-paragraph: #434455;
@@ -83,6 +84,7 @@ img {
 }
 
 .header-list-title {
+  position: relative;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -91,7 +93,22 @@ img {
   transition: var(--animation1);
 }
 .header-list-title:is(:hover, :focus) {
-  color: #404bbf;
+  color: var(--underline-color);
+}
+.active {
+  color: var(--underline-color);
+}
+
+.header-list-title.active::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  color: var(--underline-color);
+  background-color: var(--underline-color);
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  border-radius: 2px;
 }
 
 .address {
@@ -116,7 +133,7 @@ img {
   transition: var(--animation1);
 }
 .address-title:is(:hover, :focus) {
-  color: #404bbf;
+  color: var(--underline-color);
 }
 /**-----------------HERO----------------*/
 .hero {
@@ -169,7 +186,7 @@ img {
   transition: var(--animation1);
 }
 .hero-btn:is(:hover, :focus) {
-  background-color: #404bbf;
+  background-color: var(--underline-color);
 }
 /**-----------------SECTION QUALITIES----------------*/
 .qualities {
@@ -320,7 +337,7 @@ img {
   transition: background-color var(--animation1);
 }
 .team-icon-link:is(:hover, :focus) {
-  background-color: #404bbf;
+  background-color: var(--underline-color);
 }
 .team-icon-svg {
   fill: var(--color-footer-text);
@@ -362,7 +379,7 @@ img {
   transition: border-color var(--animation1), color var(--animation1);
 }
 .customer-item-link :is(:hover, :focus) {
-  background-color: #404bbf;
+  background-color: var(--underline-color);
 }
 .customers-svg {
   fill: #8e8f99;
@@ -426,7 +443,7 @@ img {
   transition: background-color var(--animation1);
 }
 .social-item-link :is(:hover, :focus) {
-  background-color: #404bbf;
+  background-color: var(--underline-color);
 }
 .social-svg {
   fill: #f4f4fd;
@@ -468,7 +485,7 @@ img {
 
 .portfolio-btn:is(:hover, :focus) {
   color: #ffffff;
-  background-color: #404bbf;
+  background-color: var(--underline-color);
   border: 1px solid transparent;
 }
 
@@ -538,4 +555,72 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-text-paragraph);
+}
+
+/**--------------MODAL----------------*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity var(--animation1), visibility var(--animation1);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleX(1);
+  transition: transform var(--animation1);
+  width: 408px;
+  min-height: 584px;
+  background-color: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scaleX(0);
+}
+
+.modal-btn-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--underline-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color var(--animation1), border var(--animation1);
+}
+
+.close-icon {
+  fill: #2e2f42;
+  transition: fill var(--animation1);
+}
+
+.modal-btn-close:hover,
+.modal-btn-close:focus {
+  background-color: var(--underline-color);
+  border: none;
+}
+
+.modal-btn-close:hover .close-icon,
+.modal-btn-close:focus .close-icon {
+  fill: #ffffff;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
