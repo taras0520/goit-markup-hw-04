@@ -467,7 +467,7 @@ img {
 }
 .social-item-link hover,
 .social-item-link focus {
-  background-color: var(--underline-color);
+  background-color: #31d0aa;
 }
 .social-svg {
   fill: #f4f4fd;
