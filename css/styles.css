@@ -212,7 +212,6 @@ img {
 
 .qualities-list {
   display: flex;
-
   gap: 24px;
 }
 .qualities-item {
@@ -227,6 +226,9 @@ img {
   background-color: #f4f4fd;
   border-radius: 4px;
   margin-bottom: 8px;
+}
+.qualities-frame:is(:hover, :focus) {
+  color: var(--underline-color);
 }
 
 .qualities-icon {
