@@ -391,8 +391,8 @@ img {
 }
 .customer-item-link hover,
 .customer-item-link focus {
-  border-color: var(--underline-color);
-  background-color: var(--underline-color);
+  border-color: #404bbf;
+  background-color: #404bbf;
 }
 .customers-svg {
   fill: currentColor;
@@ -404,8 +404,14 @@ img {
   padding: 100px 0;
   background-color: var(--color-text-title);
 }
-
+.footer-cont {
+  display: flex;
+  align-items: baseline;
+}
 .footer-logo {
+  margin-right: 120px;
+}
+.footer-logo-link {
   display: inline-block;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -455,7 +461,8 @@ img {
   width: 100%;
   transition: background-color var(--animation1);
 }
-.social-item-link :is(:hover, :focus) {
+.social-item-link hover,
+.social-item-link :focus {
   background-color: var(--underline-color);
 }
 .social-svg {
