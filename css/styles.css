@@ -194,7 +194,8 @@ img {
 }
 /**-----------------SECTION QUALITIES----------------*/
 .qualities {
-  padding: 120px 0;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .visually-hidden {
   position: absolute;
