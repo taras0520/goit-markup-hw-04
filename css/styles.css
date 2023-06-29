@@ -391,14 +391,12 @@ img {
   border-radius: 4px;
   transition: border-color var(--animation1), color var(--animation1);
 }
-.customer-item-link hover {
-  border-color: #404bbf;
-  background-color: #404bbf;
+.customer-item-link :is(:hover, :focus) {
+  border: 1px solid var(--underline-color);
+  border-radius: 4px;
+  color: var(--underline-color);
 }
-.customer-item-link focus {
-  border-color: #404bbf;
-  background-color: #404bbf;
-}
+
 .customers-svg {
   fill: currentColor;
 }
