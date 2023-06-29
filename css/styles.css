@@ -386,12 +386,12 @@ img {
   width: 100%;
   height: 100%;
   color: var(--customers-color);
-  border: 1px solid var(--customers-color);
+  border-color: 1px solid var(--customers-color);
   border-radius: 4px;
   transition: border-color var(--animation1), color var(--animation1);
 }
 .customer-item-link :is(:hover, :focus) {
-  border-color: 1px solid var(--underline-color);
+  border-color: var(--underline-color);
   color: var(--underline-color);
 }
 
@@ -622,7 +622,7 @@ img {
   height: 24px;
   padding: 0;
   border-radius: 50%;
-  background-color: var(--underline-color);
+  background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: background-color var(--animation1), border var(--animation1);
 }
