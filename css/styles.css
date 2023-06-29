@@ -217,6 +217,7 @@ img {
 .qualities-item {
   width: calc((100 - 72px) / 4);
 }
+
 .qualities-frame {
   display: flex;
   align-items: center;
@@ -389,7 +390,10 @@ img {
   border-radius: 4px;
   transition: border-color var(--animation1), color var(--animation1);
 }
-.customer-item-link hover,
+.customer-item-link hover {
+  border-color: #404bbf;
+  background-color: #404bbf;
+}
 .customer-item-link focus {
   border-color: #404bbf;
   background-color: #404bbf;
@@ -462,7 +466,7 @@ img {
   transition: background-color var(--animation1);
 }
 .social-item-link hover,
-.social-item-link :focus {
+.social-item-link focus {
   background-color: var(--underline-color);
 }
 .social-svg {
