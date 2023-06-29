@@ -227,9 +227,6 @@ img {
   border-radius: 4px;
   margin-bottom: 8px;
 }
-.qualities-frame:is(:hover, :focus) {
-  color: var(--underline-color);
-}
 
 .qualities-icon {
   width: 264px;
