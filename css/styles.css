@@ -227,7 +227,7 @@ img {
   margin-bottom: 8px;
 }
 
-.qaulities-icon {
+.qualities-icon {
   width: 264px;
   height: 112px;
   padding: 24px 100px;
@@ -303,7 +303,7 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 .team-cont {
-  padding: 32 0;
+  padding: 32px 0;
 }
 .team-subtitle {
   text-align: center;
@@ -389,7 +389,8 @@ img {
   border-radius: 4px;
   transition: border-color var(--animation1), color var(--animation1);
 }
-.customer-item-link :is(:hover, :focus) {
+.customer-item-link hover,
+.customer-item-link focus {
   border-color: var(--underline-color);
   background-color: var(--underline-color);
 }
