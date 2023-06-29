@@ -391,8 +391,8 @@ img {
   transition: border-color var(--animation1), color var(--animation1);
 }
 .customer-item-link :is(:hover, :focus) {
+  border-color: 1px solid var(--underline-color);
   color: var(--underline-color);
-  border-color: var(--underline-color);
 }
 
 .customers-svg {
